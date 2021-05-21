@@ -1,7 +1,7 @@
-NAME = Megaphone
+NAME = Phonebook
 CC = clang++
 CPP_FLAGS = -Wall -Wextra -Werror
-CPP_FILES = Megaphone.cpp
+CPP_FILES = Phonebook.cpp Contact.cpp main.cpp
 OBJFILES = $(CPP_FILES:.cpp=.o)
 
 .PHONY: all clean fclean re
