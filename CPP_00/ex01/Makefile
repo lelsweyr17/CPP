@@ -17,7 +17,7 @@ $(NAME): $(OBJFILES)
 clean:
 	rm -rf $(OBJFILES)
 
-fclean:
+fclean: clean
 	rm -rf $(NAME)
 
 re: fclean all

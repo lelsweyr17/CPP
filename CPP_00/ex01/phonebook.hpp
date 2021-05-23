@@ -20,16 +20,17 @@ class Phonebook {
 		Contact _contacts[8];
 
 	public:
-		void Add_Contact(int index);
+		void Add_Contact(int *index);
 		std::string Add_Contact_Util(const char *message);
 		void Print_Funtional_Of_Phonebook();
 		void Limit_Nbr_Of_Contacts();
 		void Print_Short_Contacts_Info(int index);
 		void Print_Spaces(std::string string);
-		int Search_Command(int index);
-		void Show_Contact_With_Index(Contact contact);
-		void Exit_Command();
-
+		void Print_Names(std::string string);
+		int Search_Contact(int index);
+		void Show_Contact_With_Index(int index);
+		int	Check_Contact_Before_Creating(Contact contact);
+		void Exit_Phonebook();
 };
 
 

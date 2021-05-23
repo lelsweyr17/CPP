@@ -65,9 +65,9 @@ void Contact::Set_First_name(std::string value_first_name)
 	_first_name = value_first_name;
 }
 
-void Contact::Set_Last_name(std::string value_first_name)
+void Contact::Set_Last_name(std::string value_last_name)
 {
-	_first_name = value_first_name;
+	_last_name = value_last_name;
 }
 
 void Contact::Set_Nickname(std::string value_nickname)

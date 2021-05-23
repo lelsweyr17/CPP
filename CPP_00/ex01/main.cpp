@@ -16,28 +16,26 @@ int main(){
 		{
 			std::cout << "Invalid input" << std::endl;
 		}
-		else if (index > 8)
-		{
-			crappy.Limit_Nbr_Of_Contacts();
-		}
 		if (command == "EXIT")
 		{
-			crappy.Exit_Command();
+			crappy.Exit_Phonebook();
 			break ;
 		}
 		else if (command == "ADD")
 		{
-			crappy.Add_Contact(index++);
+			if (index < 8)
+				crappy.Add_Contact(&index);
+			else
+				crappy.Limit_Nbr_Of_Contacts();
 		}
 		else if (command == "SEARCH")
 		{
 			crappy.Print_Short_Contacts_Info(index);
-			// search_index = crappy.Search_Command(index);
-			// if (search_index > 0 && search_index < 9 && \
-			// contact[search_index].Get_Index() >= 1 && contact[search_index].Get_Index() <= 8)
-			// 	crappy.Show_Contact_With_Index(contact[search_index]);
-			// else if (search_index != 0 && search_index != 9)
-			// 	std::cout << "Contact with index " << search_index << " not found" << std::endl;
+			search_index = crappy.Search_Contact(index);
+			if (search_index > 0 && search_index < 9 && search_index <= index)
+				crappy.Show_Contact_With_Index(search_index);
+			else if (search_index != 0 && search_index != 9 && search_index > index)
+				std::cout << "Contact with index " << search_index << " not found" << std::endl;
 		}
 	}
 	return 0;
