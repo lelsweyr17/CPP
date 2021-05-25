@@ -9,7 +9,7 @@ ZombieEvent::~ ZombieEvent()
 {
 }
 
-void	ZombieEvent::setZombieType()
+void		ZombieEvent::setZombieType()
 {
 	std::string zombieType[] = {"Classic zombie", "Virus zombie", "Brainwashed zombie", "Nucrear zombie", "Warlock zombie"};
 
@@ -23,7 +23,7 @@ std::string	ZombieEvent::getRandomName()
 	return name[rand() % 10];
 }
 
-void	ZombieEvent::randomChump()
+void		ZombieEvent::randomChump()
 {
 	Zombie *zombie;
 
@@ -32,7 +32,7 @@ void	ZombieEvent::randomChump()
 	delete zombie;
 }
 
-Zombie  *ZombieEvent::newZombie(std::string name)
+Zombie		*ZombieEvent::newZombie(std::string name)
 {
 	Zombie *zombie = new Zombie(name, _type);
 	return zombie;

@@ -2,7 +2,7 @@
 
 void    ponyOnTheHeap()
 {
-	Pony *pony;
+	Pony	*pony;
 
 	pony = new Pony;
 	std::cout << "I'm Pony created on the heap " << pony << std::endl;
@@ -11,7 +11,7 @@ void    ponyOnTheHeap()
 
 void    ponyOnTheStack()
 {
-	Pony pony;
+	Pony	pony;
 	std::cout << "I'm Pony created on the stack " << &pony << std::endl;
 }
 

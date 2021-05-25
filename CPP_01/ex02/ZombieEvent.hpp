@@ -5,19 +5,19 @@
 # include <ctime>
 # include "Zombie.hpp"
 
-class  ZombieEvent
-{
+class  ZombieEvent {
+
+private:
+	std::string	_type;
+
 public:
 	ZombieEvent();
 	~ZombieEvent();
 
-	void	setZombieType();
-	void	randomChump();
+	void		setZombieType();
+	void		randomChump();
+	Zombie		*newZombie(std::string name);
 	std::string	getRandomName();
-	Zombie *newZombie(std::string name);
-
-private:
-	std::string _type;
 
 };
 

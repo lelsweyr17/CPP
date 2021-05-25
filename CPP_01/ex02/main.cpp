@@ -3,9 +3,9 @@
 
 int main()
 {
-	Zombie zombie;
-	ZombieEvent zombieEvent;
-	std::string name;
+	Zombie		zombie;
+	ZombieEvent	zombieEvent;
+	std::string	name;
 
 	srand(time(NULL));
 	std::cout << std::endl;

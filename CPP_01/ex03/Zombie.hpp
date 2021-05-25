@@ -22,11 +22,10 @@ private:
 
 public:
 	Zombie();
-	~Zombie();
-
 	Zombie(const std::string& name, const std::string& type);
+	~Zombie();
 	
-	void	announce();
+	void		announce();
 
 };
 

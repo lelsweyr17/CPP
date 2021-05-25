@@ -2,9 +2,9 @@
 
 int main()
 {
-	std::string string = "HI THIS IS BRAIN";
-	std::string *pointer;
-	std::string &link = string;
+	std::string	string = "HI THIS IS BRAIN";
+	std::string	*pointer;
+	std::string	&link = string;
 
 	pointer = &string;
 	std::cout << "Pointer:\t" << *pointer << std::endl;

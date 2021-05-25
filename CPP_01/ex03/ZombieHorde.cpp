@@ -9,13 +9,6 @@ ZombieHorde::~ZombieHorde()
 	delete[] _horde;
 }
 
-void	ZombieHorde::setZombieType()
-{
-	std::string zombieType[] = {"Classic zombie", "Virus zombie", "Brainwashed zombie", "Nucrear zombie", "Warlock zombie"};
-
-	_type = zombieType[rand() % 5];
-}
-
 ZombieHorde::ZombieHorde(int n) : _zombieNbr(n), _type("Classic zombie")
 {
 	_horde = new Zombie[n];
@@ -33,7 +26,14 @@ std::string	ZombieHorde::getRandomName()
 	return name[rand() % 10];
 }
 
-void	ZombieHorde::announce()
+void		ZombieHorde::setZombieType()
+{
+	std::string zombieType[] = {"Classic zombie", "Virus zombie", "Brainwashed zombie", "Nucrear zombie", "Warlock zombie"};
+
+	_type = zombieType[rand() % 5];
+}
+
+void		ZombieHorde::announce()
 {
 	std::cout << std::endl;
 	std::cout << RED BOLD_FONT "HOOORRRDEEEE!!!! COME ON!" RESET_BOLD RESET << std::endl;

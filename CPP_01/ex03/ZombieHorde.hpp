@@ -4,20 +4,21 @@
 # include <iostream>
 # include "Zombie.hpp"
 
-class  ZombieHorde
-{
+class  ZombieHorde {
+
 private:
-	int _zombieNbr;
-	Zombie *_horde;
-	std::string _type;
+	int			_zombieNbr;
+	Zombie		*_horde;
+	std::string	_type;
+
 public:
 	ZombieHorde();
+	ZombieHorde(int n);
 	~ZombieHorde();
 
-	ZombieHorde(int n);
-	void	announce();
+	void		announce();
 
-	void	setZombieType();
+	void		setZombieType();
 	std::string	getRandomName();
 };
 

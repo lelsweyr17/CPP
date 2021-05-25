@@ -26,7 +26,7 @@ public:
 
 	Zombie(const std::string& name, const std::string& type);
 	
-	void	announce();
+	void		announce();
 
 };
 
