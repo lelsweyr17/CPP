@@ -8,7 +8,7 @@
 class Human
 {
 private:
-    Brain _brain;
+    Brain   _brain;
     
 public:
     Human();

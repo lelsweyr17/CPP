@@ -8,12 +8,12 @@ Human::~Human()
 {
 }
 
-Brain *Human::identify()
+Brain	*Human::identify()
 {
 	return &_brain;
 }
 
-Brain &Human::getBrain()
+Brain	&Human::getBrain()
 {
 	return _brain;
 }

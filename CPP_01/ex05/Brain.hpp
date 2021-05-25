@@ -9,7 +9,7 @@ public:
     Brain();
     ~Brain();
 
-    Brain *identify();
+    Brain   *identify();
 };
 
 

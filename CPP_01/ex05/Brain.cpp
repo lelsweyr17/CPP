@@ -8,7 +8,7 @@ Brain::~Brain()
 {
 }
 
-Brain *Brain::identify()
+Brain   *Brain::identify()
 {
     return this;
 }
