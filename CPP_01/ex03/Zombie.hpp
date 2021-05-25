@@ -1,7 +1,7 @@
 #ifndef ZOMBIE_HPP
 # define ZOMBIE_HPP
 
-# include <iostream>
+#include <iostream>
 
 # define RED		"\x1b[31m"
 # define GREEN		"\x1b[32m"
@@ -14,7 +14,7 @@
 # define BOLD_FONT	"\e[1m"
 # define RESET_BOLD	"\e[0m"
 
-class  Zombie
+class Zombie
 {
 private:
 	std::string	_name;

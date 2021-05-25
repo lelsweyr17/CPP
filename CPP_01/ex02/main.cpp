@@ -9,6 +9,7 @@ int main()
 
 	srand(time(NULL));
 	std::cout << std::endl;
+	zombieEvent.setZombieType();
 	for (int i = 0; i < 10; i++)
 	{
 		if (i != 0)
