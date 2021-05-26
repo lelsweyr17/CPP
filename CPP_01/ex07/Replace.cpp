@@ -5,7 +5,7 @@ void	replace(std::string filename, std::string s1, std::string s2)
 	std::ifstream	fIn;
 	std::ofstream	fOut;
 	std::string		testStr;
-	size_t len;
+	int len;
 
 	fIn.open(filename);
 	fOut.open(filename + ".replace");
