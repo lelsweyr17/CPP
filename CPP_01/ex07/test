@@ -3,7 +3,7 @@ s1 and s2, that are NOT empty.
 It will open the file, and write its contents to FILENAME.replace, after replacing
 every occurence of s1 with s2. replac.e
 
-
+abc
 
 Of course, you will handle errors as best you can, and not use the C file manipulation
 functions, because that would be cheating, and cheating’s bad, m’kay?

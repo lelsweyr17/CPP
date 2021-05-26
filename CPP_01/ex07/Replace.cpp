@@ -16,11 +16,11 @@ void	replace(std::string filename, std::string s1, std::string s2)
 	}
 	while (std::getline(fIn, testStr))
 	{
-		len = testStr.find(s1);
+		len = testStr.find(s1, 0);
 		while (len != -1)
 		{
 			testStr.replace(len, s1.size(), s2);
-			len = testStr.find(s1);
+			len = testStr.find(s1, len + s2.size());
 		}
 		if (fIn.eof())
 			fOut << testStr;

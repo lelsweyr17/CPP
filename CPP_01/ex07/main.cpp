@@ -1,11 +1,17 @@
 #include "Replace.hpp"
 
-int main()
+int main(int argc, char **argv)
 {
-	std::string	filename = "test";
-	std::string	s1 = "replace";
-	std::string	s2 = "[REPLACE]";
-
-	replace(filename, s1, s2);
+	if (argc != 4)
+	{
+	 	std::cout << "Uncorrect number of args" << std::endl;
+		return 0;
+	}
+	if (!argv[1] || !argv[2] || !argv[3])
+	{
+		std::cout << "One of argument is empty" << std::endl;
+		return 0;
+	}
+	replace(argv[1], argv[2], argv[3]);
 	return 0;
 }
