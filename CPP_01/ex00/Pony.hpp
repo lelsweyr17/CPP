@@ -4,12 +4,10 @@
 # include <iostream>
 
 class Pony {
-
-public:
-	Pony();
-	~Pony();
-
-	Pony(std::string name);
+	public:
+		Pony();
+		~Pony();
+		Pony(std::string name);
 };
 
 #endif

@@ -5,10 +5,6 @@
 # include <cmath>
 
 class Fixed {
-	private:
-		int					_intFix;
-		static const int	_frBits = 8;
-
 	public:
 		Fixed();
 		Fixed(int n);
@@ -21,6 +17,10 @@ class Fixed {
 		float	toFloat(void) const;
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
+
+	private:
+		int					_intFix;
+		static const int	_frBits = 8;
 };
 
 std::ostream	&operator<<(std::ostream &out, const Fixed &fixed);

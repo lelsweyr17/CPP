@@ -2,9 +2,9 @@
 
 int main()
 {
-    Human mency;
+	Human mency;
 
-    std::cout << mency.identify() << std::endl;
-    std::cout << mency.getBrain().identify() << std::endl;
-    return 0;
+	std::cout << mency.identify() << std::endl;
+	std::cout << mency.getBrain().identify() << std::endl;
+	return 0;
 }

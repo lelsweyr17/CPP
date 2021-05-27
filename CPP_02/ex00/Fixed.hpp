@@ -4,10 +4,6 @@
 # include <iostream>
 
 class Fixed {
-	private:
-		int					_intFix;
-		static const int	_frBits;
-
 	public:
 		Fixed();
 		~Fixed();
@@ -16,6 +12,10 @@ class Fixed {
 
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
+
+	private:
+		int					_intFix;
+		static const int	_frBits;
 };
 
 #endif

@@ -5,21 +5,20 @@
 # include "Zombie.hpp"
 
 class  ZombieHorde {
+	public:
+		ZombieHorde();
+		ZombieHorde(int n);
+		~ZombieHorde();
 
-private:
-	int			_zombieNbr;
-	Zombie		*_horde;
-	std::string	_type;
+		void		announce();
 
-public:
-	ZombieHorde();
-	ZombieHorde(int n);
-	~ZombieHorde();
+		void		setZombieType();
+		std::string	getRandomName();
 
-	void		announce();
-
-	void		setZombieType();
-	std::string	getRandomName();
+	private:
+		int			_zombieNbr;
+		Zombie		*_horde;
+		std::string	_type;
 };
 
 #endif

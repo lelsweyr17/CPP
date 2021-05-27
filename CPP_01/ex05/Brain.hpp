@@ -3,13 +3,12 @@
 
 # include <iostream>
 
-class Brain
-{
-public:
-    Brain();
-    ~Brain();
+class Brain {
+	public:
+		Brain();
+		~Brain();
 
-    Brain   *identify();
+		Brain   *identify();
 };
 
 

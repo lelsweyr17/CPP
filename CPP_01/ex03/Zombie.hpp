@@ -14,19 +14,17 @@
 # define BOLD_FONT	"\e[1m"
 # define RESET_BOLD	"\e[0m"
 
-class Zombie
-{
-private:
-	std::string	_name;
-	std::string	_type;
+class Zombie {
+	public:
+		Zombie();
+		Zombie(const std::string& name, const std::string& type);
+		~Zombie();
+		
+		void		announce();
 
-public:
-	Zombie();
-	Zombie(const std::string& name, const std::string& type);
-	~Zombie();
-	
-	void		announce();
-
+	private:
+		std::string	_name;
+		std::string	_type;
 };
 
 #endif

@@ -14,7 +14,7 @@ HumanB::HumanB(const std::string& valueName) : _name(valueName)
 
 void	HumanB::setWeapon(Weapon& valueWeapon)
 {
-    _weapon = &valueWeapon;
+	_weapon = &valueWeapon;
 }
 
 void	HumanB::attack()
