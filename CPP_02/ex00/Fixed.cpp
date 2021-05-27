@@ -15,7 +15,7 @@ Fixed::Fixed(const Fixed &fixed) : _intFix(fixed._intFix)
 	std::cout << "Copy constructor called" << std::endl;
 }
 
-Fixed &Fixed::operator=(const Fixed &fixed)
+Fixed	&Fixed::operator=(const Fixed &fixed)
 {
 	std::cout << "Assignation operator called" << std::endl;
 	this->_intFix = fixed._intFix;

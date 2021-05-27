@@ -54,7 +54,7 @@ float	Fixed::toFloat(void) const
 	return (float)(_intFix / (float)(1 << _frBits));
 }
 
-std::ostream &operator<<(std::ostream &out, const Fixed &fixed)
+std::ostream	&operator<<(std::ostream &out, const Fixed &fixed)
 {
 	out << fixed.toFloat();
 	return out;
