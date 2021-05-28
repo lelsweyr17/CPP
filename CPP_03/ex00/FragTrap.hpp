@@ -3,6 +3,18 @@
 
 # include <iostream>
 
+# define RED		"\x1b[31m"
+# define GREEN		"\x1b[32m"
+# define YELLOW		"\x1b[33m"
+# define BLUE		"\x1b[34m"
+# define MAGENTA	"\x1b[35m"
+# define CYAN		"\x1b[36m"
+# define WHITE		"\x1b[37m"
+# define RESET		"\x1b[0m"
+# define ITALIC		"\e[3m"
+# define BOLD		"\e[1m"
+# define RESET_FONT	"\e[0m"
+
 class FragTrap {
 	public:
 		FragTrap();
@@ -15,17 +27,20 @@ class FragTrap {
 		void	meleeAttack(std::string const &target);
 		void	takeDamage(unsigned int amount);
 		void	beRepaired(unsigned int amount);
+		void	randomActionQuotes(std::string enemyName);
+		void	vaulthunter_dot_exe(std::string const &target);
+		void	setCloneName(FragTrap const &clonTrap, std::string nameValue);
 
 	private:
 		std::string		name;
-		unsigned int	hitPoints;
-		unsigned int	maxHitPoints;
-		unsigned int	energyPoints;
-		unsigned int	maxEnergyPoints;
-		unsigned int	level;
-		unsigned int	meleeAttackDamage;
-		unsigned int	rangedAttackDamage;
-		unsigned int	armorAttackReduction;
+		int				hitPoints;
+		int				maxHitPoints;
+		int				energyPoints;
+		int				maxEnergyPoints;
+		int				level;
+		int				meleeAttackDamage;
+		int				rangedAttackDamage;
+		int				armorAttackReduction;
 };
 
 #endif
