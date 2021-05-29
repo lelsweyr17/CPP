@@ -7,12 +7,12 @@ int main()
 	srand(time(NULL));
 	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl;
 	std::cout << BOLD "\t\t+\t\tFIGHTING\t\t+" RESET << std::endl;
-	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl;
-	std::cout << ITALIC BOLD << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET RESET << std::endl << std::endl;
-	ClapTrap clapTrap(MAGENTA BOLD ITALIC "CLAPTRAP" RESET RESET RESET, 200, 200, 200, 200, 2, 60, 40, 10);
-	FragTrap fragTrap(CYAN BOLD ITALIC "FRAGTRAP" RESET RESET RESET, 100, 100, 100, 100, 1, 30, 20, 5);
+	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl << std::endl;
+	std::cout << ITALIC BOLD << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET RESET <<  std::endl << std::endl;
+	ClapTrap clapTrap(MAGENTA BOLD ITALIC "CLAPTRAP" RESET RESET RESET);
+	FragTrap fragTrap(CYAN BOLD ITALIC "FRAGTRAP" RESET RESET RESET);
 	FragTrap cloneFragTrap(fragTrap);
-	ScavTrap scavTrap(YELLOW BOLD ITALIC "SCAVTRAP" RESET RESET RESET, 100,100, 50, 50, 1, 20, 15, 3);
+	ScavTrap scavTrap(YELLOW BOLD ITALIC "SCAVTRAP" RESET RESET RESET);
 	ScavTrap cloneScavTrap(scavTrap);
 
 	clapTrap.meleeAttack("OLEG");
@@ -32,6 +32,6 @@ int main()
 	scavTrap.meleeAttack("JACK");
 	fragTrap.randomActionQuotes("BORIS");
 	fragTrap.beRepaired(30);
-	std::cout << ITALIC BOLD << "\t\t* THE END OF A FIERCE FIGHT *" << RESET << std::endl << std::endl;
+	std::cout << ITALIC BOLD << "\t\t* THE END OF A FIERCE FIGHT *" << RESET << std::endl << std::endl;;
 	return 0;
 }

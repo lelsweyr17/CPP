@@ -15,11 +15,11 @@
 # define BOLD		"\e[1m"
 # define RESET		"\e[0m"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 	public:
 		FragTrap();
-		~FragTrap();
-		FragTrap(std::string, int, int, int, int, int, int, int, int);
+		virtual ~FragTrap();
+		FragTrap(std::string);
 		FragTrap(const FragTrap& fragTrap);
 		FragTrap& operator=(const FragTrap& fragTrap);
 

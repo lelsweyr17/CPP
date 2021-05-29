@@ -15,11 +15,11 @@
 # define BOLD		"\e[1m"
 # define RESET		"\e[0m"
 
-class NinjaTrap : public ClapTrap {
+class NinjaTrap : virtual public ClapTrap {
 	public:
 		NinjaTrap();
-		~NinjaTrap();
-		NinjaTrap(std::string, int, int, int, int, int, int, int, int);
+		virtual ~NinjaTrap();
+		NinjaTrap(std::string);
 		NinjaTrap(const NinjaTrap& ninjaTrap);
 		NinjaTrap& operator=(const NinjaTrap& ninjaTrap);
 

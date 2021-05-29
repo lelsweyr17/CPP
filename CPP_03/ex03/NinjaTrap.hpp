@@ -19,7 +19,7 @@ class NinjaTrap : public ClapTrap {
 	public:
 		NinjaTrap();
 		~NinjaTrap();
-		NinjaTrap(std::string, int, int, int, int, int, int, int, int);
+		NinjaTrap(std::string);
 		NinjaTrap(const NinjaTrap& ninjaTrap);
 		NinjaTrap& operator=(const NinjaTrap& ninjaTrap);
 

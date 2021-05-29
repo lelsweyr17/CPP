@@ -18,8 +18,8 @@
 class ClapTrap {
 	public:
 		ClapTrap();
-		~ClapTrap();
-		ClapTrap(std::string, int, int, int, int, int, int, int, int);
+		virtual ~ClapTrap();
+		ClapTrap(std::string);
 		ClapTrap(const ClapTrap& clapTrap);
 		ClapTrap&		operator=(const ClapTrap& clapTrap);
 

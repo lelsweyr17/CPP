@@ -19,7 +19,7 @@ class ScavTrap : public ClapTrap {
 	public:
 		ScavTrap();
 		~ScavTrap();
-		ScavTrap(std::string valueName, int hit, int maxHit, int energy, int maxEnergy, int lvl, int melee, int ranged, int armor);
+		ScavTrap(std::string valueName);
 		ScavTrap(const ScavTrap& scavTrap);
 		ScavTrap& operator=(const ScavTrap& scavTrap);
 		

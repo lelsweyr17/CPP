@@ -4,8 +4,17 @@ FragTrap::FragTrap() : ClapTrap()
 {
 }
 
-FragTrap::FragTrap(std::string valueName, int hit, int maxHit, int energy, int maxEnergy, int lvl, int melee, int ranged, int armor) : ClapTrap(valueName, hit, maxHit, energy, maxEnergy, lvl, ranged, melee, armor)
+FragTrap::FragTrap(std::string valueName) : ClapTrap(valueName)
 {
+	name = valueName;
+	hitPoints = 100;
+	maxHitPoints = 100;
+	energyPoints = 100;
+	maxEnergyPoints = 100;
+	level = 1;
+	meleeAttackDamage = 30;
+	rangedAttackDamage = 20;
+	armorAttackReduction = 5;
 }
 
 FragTrap::~FragTrap()
@@ -13,7 +22,7 @@ FragTrap::~FragTrap()
 	
 }
 
-FragTrap::FragTrap(const FragTrap &fragTrap) : ClapTrap(fragTrap)
+FragTrap::FragTrap(const FragTrap &copy) : ClapTrap(copy)
 {
 }
 
@@ -36,12 +45,13 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 {
 	if (energyPoints < 25)
 	{
-		std::cout << ITALIC << "\t\t\t\t\t\t* EP are not enough for VaultHunter.EXE *" << RESET << std::endl << std::endl;
+		std::cout << ITALIC << "\t\t\t\t\t\t* EP are not enough for VaultHunter.EXE *" << RESET << std::endl;
 		return ;
 	}
+	std::cout << std::endl;
 	std::cout << CYAN ITALIC << "\t\t\t*** " RESET RESET << name << CYAN ITALIC <<" activating VaultHunter.EXE ***" << RESET << std::endl << std::endl;
 	std::string quotes[] = {"Hey everybody, check out my package!", "Loading combat packages!", "I have an IDEA!", "Let's get this party started!", "It's like a box of chocolates..."};
 	std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 5] << "\"" << RESET RESET << std::endl;
 	energyPoints -= 25;
-	std::cout << ITALIC ITALIC "\t\t\t\t\t\t* FR4G-TP " RESET RESET << name << ITALIC << " attack " << target << " with VaultHunter.EXE *"  << RESET << std::endl << std::endl;
+	std::cout << ITALIC ITALIC "\t\t\t\t\t\t* FR4G-TP " RESET RESET << name << ITALIC << " attack " << target << " with VaultHunter.EXE *"  << RESET << std::endl;
 }
