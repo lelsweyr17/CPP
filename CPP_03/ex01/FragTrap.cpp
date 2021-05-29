@@ -82,7 +82,7 @@ void		FragTrap::takeDamage(unsigned int amount)
 	{
 		std::string	quotes[] = {"Oh no, Badass!", "Why do I even feel pain?!", "Brrh... So cold... brrh...", "Extra ouch!", "My robotic flesh! AAHH!", "Why did they build me out of galvanized flesh?!", "JESUS CHRIST!"};
 		std::cout << ITALIC "\t\t\t\t\t\t* FR4G-TP " RESET << name << ITALIC << " taking -" << amount << " HP *" << RESET_FONT << std::endl;
-		std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 11] << "\"" << RESET_FONT RESET_FONT << std::endl;
+		std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 7] << "\"" << RESET_FONT RESET_FONT << std::endl;
 		hitPoints -= (amount - armorAttackReduction);
 		std::cout << ITALIC << "\t\t\t\t\t\tNAME(" << name << RESET ITALIC << ")\tHP("<< hitPoints << ")\tEP(" << energyPoints << ")\tLVL(" << level << ")\tARMOR(" << armorAttackReduction << ")" << RESET_FONT << std::endl << std::endl;
 	}
@@ -114,11 +114,4 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 	std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 5] << "\"" << RESET_FONT RESET_FONT << std::endl;
 	energyPoints -= 25;
 	std::cout << ITALIC ITALIC "\t\t\t\t\t\t* FR4G-TP " RESET RESET << name << ITALIC << " attack " << target << " with VaultHunter.EXE *"  << RESET_FONT << std::endl << std::endl;
-}
-
-void	FragTrap::randomActionQuotes(std::string enemyName)
-{
-	std::string quotes[] = {"Wheeeee!", "Yahooooo!", "Aaaaaaahhh!", "Watch as we observe the rare and beautiful Clappy Bird!", "I'm flying! I'm really flying!", "Look out below!", "Yipe!", "Yikes!", "Yeehaw!"};
-	std::cout << YELLOW ITALIC BOLD << enemyName << " : \"" << quotes[rand() % 9] << "\"" << RESET_FONT RESET_FONT RESET << std::endl << std::endl;
-
 }
