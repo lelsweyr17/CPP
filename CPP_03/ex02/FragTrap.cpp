@@ -49,9 +49,9 @@ void	FragTrap::vaulthunter_dot_exe(std::string const & target)
 		return ;
 	}
 	std::cout << std::endl;
-	std::cout << CYAN ITALIC << "\t\t\t*** " RESET RESET << name << CYAN ITALIC <<" activating VaultHunter.EXE ***" << RESET << std::endl << std::endl;
+	std::cout << CYAN ITALIC << "\t\t\t*** " RESET << name << CYAN ITALIC <<" activating VaultHunter.EXE ***" << RESET << std::endl << std::endl;
 	std::string quotes[] = {"Hey everybody, check out my package!", "Loading combat packages!", "I have an IDEA!", "Let's get this party started!", "It's like a box of chocolates..."};
-	std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 5] << "\"" << RESET RESET << std::endl;
+	std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 5] << "\"" << RESET << std::endl;
 	energyPoints -= 25;
-	std::cout << ITALIC ITALIC "\t\t\t\t\t\t* FR4G-TP " RESET RESET << name << ITALIC << " attack " << target << " with VaultHunter.EXE *"  << RESET << std::endl;
+	std::cout << ITALIC ITALIC "\t\t\t\t\t\t* FR4G-TP " RESET << name << ITALIC << " attack " << target << " with VaultHunter.EXE *"  << RESET << std::endl;
 }

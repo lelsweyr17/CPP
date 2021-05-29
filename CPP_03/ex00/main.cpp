@@ -7,7 +7,7 @@ int main()
 	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl << std::endl;
 	{
 		std::cout << ITALIC << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET << std::endl;
-		FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET RESET RESET);
+		FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET RESET);
 		srand(time(NULL));
 
 		frapTrap.meleeAttack(YELLOW "MECHROMAGICIAN" RESET);

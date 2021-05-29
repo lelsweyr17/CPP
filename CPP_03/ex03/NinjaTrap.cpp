@@ -51,7 +51,7 @@ void	NinjaTrap::ninjaShoebox(std::string const & target)
 	std::cout << std::endl;
 	std::cout << GREEN ITALIC << "\t\t\t*** " RESET << name << GREEN ITALIC <<" activating Ninja Shoebox ***" << RESET << std::endl << std::endl;
 	std::string quotes[] = {"I'm cloaking...", "Roses are red and/Violets are blue/Wait... how many syllables was that?", "Shoot him... he's the real one...", "I'm a robot ninja...", "I'm invisible!", "Here, take this!", ".....SHhhHhHHhhHhhHHhHHhh....."};
-	std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 6] << "\"" << RESET RESET << std::endl;
+	std::cout << name << ITALIC BOLD << " : \"" << quotes[rand() % 6] << "\"" << RESET << std::endl;
 	energyPoints -= 25;
 	std::cout << ITALIC "\t\t\t\t\t\t* FR4G-TP " RESET << name << ITALIC << " attack " << RED << target << RESET ITALIC << " with ninja shoebox *"  << RESET << std::endl;
 }

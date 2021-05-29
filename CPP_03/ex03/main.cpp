@@ -9,13 +9,13 @@ int main()
 	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl;
 	std::cout << BOLD "\t\t+\t\tFIGHTING\t\t+" RESET << std::endl;
 	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl << std::endl;
-	std::cout << ITALIC BOLD << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET RESET <<  std::endl << std::endl;
-	ClapTrap clapTrap(MAGENTA BOLD ITALIC "CLAPTRAP" RESET RESET RESET);
-	FragTrap fragTrap(CYAN BOLD ITALIC "FRAGTRAP" RESET RESET RESET);
+	std::cout << ITALIC BOLD << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET <<  std::endl << std::endl;
+	ClapTrap clapTrap(MAGENTA BOLD ITALIC "CLAPTRAP" RESET RESET);
+	FragTrap fragTrap(CYAN BOLD ITALIC "FRAGTRAP" RESET RESET);
 	FragTrap cloneFragTrap(fragTrap);
-	ScavTrap scavTrap(YELLOW BOLD ITALIC "SCAVTRAP" RESET RESET RESET);
+	ScavTrap scavTrap(YELLOW BOLD ITALIC "SCAVTRAP" RESET RESET);
 	ScavTrap cloneScavTrap(scavTrap);
-	NinjaTrap ninjaTrap(GREEN BOLD ITALIC "NINJATRAP" RESET RESET RESET);
+	NinjaTrap ninjaTrap(GREEN BOLD ITALIC "NINJATRAP" RESET RESET);
 	NinjaTrap cloneNinjaTrap(ninjaTrap);
 
 	clapTrap.meleeAttack("OLEG");
