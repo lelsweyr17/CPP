@@ -1,5 +1,5 @@
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef NINJATRAP_HPP
+# define NINJATRAP_HPP
 
 # include <iostream>
 # include "ClapTrap.hpp"
@@ -15,15 +15,15 @@
 # define BOLD		"\e[1m"
 # define RESET		"\e[0m"
 
-class FragTrap : public ClapTrap {
+class NinjaTrap : public ClapTrap {
 	public:
-		FragTrap();
-		~FragTrap();
-		FragTrap(std::string, int, int, int, int, int, int, int, int);
-		FragTrap(const FragTrap& fragTrap);
-		FragTrap& operator=(const FragTrap& fragTrap);
+		NinjaTrap();
+		~NinjaTrap();
+		NinjaTrap(std::string, int, int, int, int, int, int, int, int);
+		NinjaTrap(const NinjaTrap& ninjaTrap);
+		NinjaTrap& operator=(const NinjaTrap& ninjaTrap);
 
-		void	vaulthunter_dot_exe(std::string const &target);
+		void	ninjaShoebox(std::string const &target);
 };
 
 #endif

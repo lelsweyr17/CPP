@@ -3,12 +3,12 @@
 
 int main()
 {
-	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET_FONT << std::endl;
-	std::cout << BOLD "\t\t+\t\t\t\t\tFIGHT #1\t\t+" RESET_FONT << std::endl;
-	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET_FONT << std::endl;
-	std::cout << ITALIC BOLD << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET_FONT RESET_FONT << std::endl << std::endl;
-	FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET_FONT RESET_FONT RESET);
-	ScavTrap scavTrap(YELLOW ITALIC BOLD "SCAVTRAP" RESET_FONT RESET_FONT RESET);
+	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl;
+	std::cout << BOLD "\t\t+\t\t\t\t\tFIGHT #1\t\t+" RESET << std::endl;
+	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl;
+	std::cout << ITALIC BOLD << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET RESET << std::endl << std::endl;
+	FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET RESET RESET);
+	ScavTrap scavTrap(YELLOW ITALIC BOLD "SCAVTRAP" RESET RESET RESET);
 	srand(time(NULL));
 
 	frapTrap.meleeAttack("GUEST");
@@ -23,6 +23,6 @@ int main()
 	scavTrap.beRepaired(rand() % 20 + 1);
 	scavTrap.challengeNewcomer("TEST");
 
-	std::cout << ITALIC RESET_FONT << "\t\t* THE END OF A FIERCE FIGHT *" << RESET_FONT RESET_FONT << std::endl << std::endl;
+	std::cout << ITALIC BOLD << "\t\t* THE END OF A FIERCE FIGHT *" << RESET << std::endl << std::endl;
 	return 0;
 }

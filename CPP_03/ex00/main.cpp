@@ -2,12 +2,12 @@
 
 int main()
 {
-	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET_FONT << std::endl;
-	std::cout << BOLD "\t\t+\t\t\t\t\tFIGHT #1\t\t+" RESET_FONT << std::endl;
-	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET_FONT << std::endl << std::endl;
+	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl;
+	std::cout << BOLD "\t\t+\t\t\t\t\tFIGHT #1\t\t+" RESET << std::endl;
+	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl << std::endl;
 	{
-		std::cout << ITALIC << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET_FONT << std::endl << std::endl;
-		FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET_FONT RESET_FONT RESET);
+		std::cout << ITALIC << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET << std::endl << std::endl;
+		FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET RESET RESET);
 		srand(time(NULL));
 
 		frapTrap.meleeAttack(YELLOW "MECHROMAGICIAN" RESET);
@@ -26,15 +26,15 @@ int main()
 		frapTrap.takeDamage(rand() % 20 + 1);
 		frapTrap.randomActionQuotes(YELLOW "MECHROMAGICIAN" RESET);
 		frapTrap.takeDamage(rand() % 20 + 1);
-		std::cout << ITALIC << "\t\t * MECHROMAGICIAN IS DEAD *" << RESET_FONT << std::endl << std::endl;
-		std::cout << ITALIC << "\t\t* THE END OF A FIERCE FIGHT *" << RESET_FONT << std::endl << std::endl;
+		std::cout << ITALIC << "\t\t * MECHROMAGICIAN IS DEAD *" << RESET << std::endl << std::endl;
+		std::cout << ITALIC BOLD << "\t\t* THE END OF A FIERCE FIGHT *" << RESET << std::endl << std::endl;
 	}
-	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET_FONT << std::endl;
-	std::cout << BOLD "\t\t+\t\t\t\t\tFIGHT #2\t\t+" RESET_FONT << std::endl;
-	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET_FONT << std::endl << std::endl;
+	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl;
+	std::cout << BOLD "\t\t+\t\t\t\t\tFIGHT #2\t\t+" RESET << std::endl;
+	std::cout << BOLD "\t\t+++++++++++++++++++++++++++++++++++++++++" RESET << std::endl << std::endl;
 	{
-		std::cout << ITALIC << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET_FONT << std::endl << std::endl;
-		FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET_FONT RESET_FONT RESET);
+		std::cout << ITALIC << "\t\t* LET'S START THIS THE-BEST-EVER-FIGHT *" << RESET << std::endl << std::endl;
+		FragTrap frapTrap(RED ITALIC BOLD "FRAGTRAP" RESET RESET RESET);
 		srand(time(NULL));
 
 		frapTrap.meleeAttack(CYAN "GUN WIZARD" RESET);
@@ -56,8 +56,8 @@ int main()
 		frapTrap.randomActionQuotes(CYAN "GUN WIZARD" RESET);
 		frapTrap.takeDamage(rand() % 30 + 1);
 		frapTrap.takeDamage(rand() % 30 + 1);
-		std::cout << ITALIC << "\t\t * GUN WIZARD IS DEAD *" << RESET_FONT << std::endl << std::endl;
-		std::cout << ITALIC << "\t\t* THE END OF A FIERCE FIGHT *" << RESET_FONT << std::endl << std::endl;
+		std::cout << ITALIC << "\t\t * GUN WIZARD IS DEAD *" << RESET << std::endl << std::endl;
+		std::cout << ITALIC BOLD << "\t\t* THE END OF A FIERCE FIGHT *" << RESET << std::endl << std::endl;
 	}
 
 	return 0;

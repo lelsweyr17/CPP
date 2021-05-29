@@ -10,10 +10,9 @@
 # define MAGENTA	"\x1b[35m"
 # define CYAN		"\x1b[36m"
 # define WHITE		"\x1b[37m"
-# define RESET		"\x1b[0m"
 # define ITALIC		"\e[3m"
 # define BOLD		"\e[1m"
-# define RESET_FONT	"\e[0m"
+# define RESET		"\e[0m"
 
 class ScavTrap {
 	public:
