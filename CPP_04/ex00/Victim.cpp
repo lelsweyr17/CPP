@@ -16,6 +16,7 @@ Victim::Victim(std::string valueName) : name(valueName)
 
 Victim::Victim(const Victim& copy)
 {
+	
 	operator=(copy);
 	std::cout << "I'm copy of " << name << "!" << std::endl;
 }
