@@ -19,8 +19,10 @@ Squad::Squad(const Squad &copy) {
 }
 
 Squad &Squad::operator=(const Squad &sq) {
-	count = sq.count;
-	squad = sq.squad;
+	if (this != &sq) {
+		count = sq.count;
+		squad = sq.squad;
+	}
 	return *this;
 }
 
@@ -38,7 +40,7 @@ ISpaceMarine*   Squad::getUnit(int count) const {
 	return (ISpaceMarine *)test->content;
 }
 
-t_list			*Squad::ftLstLast(t_list *lst) {
+t_list			*Squad::lstLast(t_list *lst) {
 	if (lst) {
 		while (lst->next) {
 			lst = lst->next;
@@ -50,11 +52,11 @@ t_list			*Squad::ftLstLast(t_list *lst) {
 	return 0 ;
 }
 
-void			Squad::ftLstAddBack(t_list **lst, t_list *newLst) {
+void			Squad::lstAddBack(t_list **lst, t_list *newLst) {
 	t_list	*last;
 
 	if (*lst) {
-		last = ftLstLast(*lst);
+		last = lstLast(*lst);
 		last->next = newLst;
 	}
 	else {
@@ -62,7 +64,7 @@ void			Squad::ftLstAddBack(t_list **lst, t_list *newLst) {
 	}
 }
 
-t_list			*Squad::ftLstNew(void *content) {
+t_list			*Squad::lstNew(void *content) {
 	t_list	*lst = new t_list;
 	lst->content = content;
 	lst->next = NULL;
@@ -72,8 +74,8 @@ t_list			*Squad::ftLstNew(void *content) {
 int				Squad::push(ISpaceMarine* marine) {
 	t_list	*newLst;
 
-	newLst = ftLstNew(marine);
-	ftLstAddBack(&squad, newLst);
+	newLst = lstNew(marine);
+	lstAddBack(&squad, newLst);
 	count++;
 	return count;
 }

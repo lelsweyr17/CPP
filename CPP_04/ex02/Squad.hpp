@@ -20,9 +20,9 @@ class Squad : public ISquad {
 		virtual 	ISpaceMarine* getUnit(int) const;
 		virtual 	int push(ISpaceMarine*);
 
-		void		ftLstAddBack(t_list **lst, t_list *newLst);
-		t_list		*ftLstLast(t_list *lst);
-		t_list		*ftLstNew(void *content);
+		void		lstAddBack(t_list **lst, t_list *newLst);
+		t_list		*lstLast(t_list *lst);
+		t_list		*lstNew(void *content);
 
 	private:
 		int				count;

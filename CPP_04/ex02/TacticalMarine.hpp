@@ -4,7 +4,7 @@
 # include <iostream>
 # include "ISpaceMarine.hpp"
 
-class TacticalMarine : public ISpaceMarine{
+class TacticalMarine : public ISpaceMarine {
 	public:
 		TacticalMarine();
 		~TacticalMarine();
