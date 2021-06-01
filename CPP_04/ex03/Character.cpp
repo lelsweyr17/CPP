@@ -48,7 +48,7 @@ void				Character::unequip(int idx) {
 
 void				Character::use(int idx, ICharacter& target) {
 	if (equipment[idx])
-		std::cout << "* shoots an " << equipment[idx]->getType() << " bolt at " << target.getName() <<" *" << std::endl;
+		equipment[idx]->use(target);
 	else
 		std::cout << "* unkhown equipment *" << std::endl;
 }
