@@ -4,6 +4,11 @@ Character::Character() {
 }
 
 Character::~Character() {
+	for (int i = 0; i < 4; i++) {
+		if (equipment[i]) {
+			delete equipment[i];
+		}
+	}
 }
 
 Character::Character(std::string const &name) : name(name), count(0) {
@@ -36,12 +41,14 @@ void				Character::equip(AMateria* aMateria) {
 	}
 	else {
 		std::cout << "* equipment of " << name << " is full *" << std::endl;
+		delete aMateria;
 	}
 }
 
 void				Character::unequip(int idx) {
 	if (equipment[idx]) {
 		std::cout << "* " << name << " unequiped with " << equipment[idx]->getType() << " *" << std::endl;
+		delete equipment[idx];
 		equipment[idx] = 0;
 	}
 }

@@ -29,16 +29,22 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &ms) {
 }
 
 void		MateriaSource::learnMateria(AMateria *aMateria) {
-	source[count] = aMateria;
-	std::cout << "* learning new Materia " << source[count]->getType() << " *" << std::endl;
-	count++;
+	if (count < 4) {
+		source[count] = aMateria;
+		std::cout << "* learning new Materia " << source[count]->getType() << " *" << std::endl;
+		count++;
+	}
+	else {
+		std::cout << "* limit of nbr of learned materia is extended *" << std::endl;
+		delete aMateria;
+	}
 }
 
 AMateria*	MateriaSource::createMateria(std::string const &type) {
-	for (int i = 0; i < count; i++) {
+	for (int i = 0; i < 4; i++) {
 		if (source[i]->getType() == type) {
 			std::cout << "* create Materia " << source[i]->getType() << " *" << std::endl;
-			return source[i];
+			return source[i]->clone();
 		}
 	}
 	return 0;
