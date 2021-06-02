@@ -12,6 +12,8 @@ int main()
 
 	ICharacter *mutant = new Character("Mutant");
 
+	ICharacter *a = mutant;
+
 	AMateria* tmp;
 	tmp = src->createMateria("ice");
 	mutant->equip(tmp);
@@ -47,8 +49,9 @@ int main()
 
 	std::cout  << std::endl;
 
-	mutant->use(0, *bob);
-	mutant->use(1, *bob);
+	mutant->use(0, *a);
+	mutant->use(1, *a);
+
 	bob->use(1, *mutant);
 	bob->use(0, *mutant);
 	bob->use(3, *mutant);

@@ -25,6 +25,10 @@ Character::Character(const Character &copy) {
 Character&			Character::operator=(const Character &character) {
 	if (this != &character) {
 		name = character.name;
+		count = character.count;
+		for (int i = 0; i < 4; i++) {
+			equipment[i] = character.equipment[i]->clone();
+		}
 	}
 	return *this;
 }
