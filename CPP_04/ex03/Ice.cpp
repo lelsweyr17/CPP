@@ -12,7 +12,7 @@ Ice::Ice(std::string const &type) : AMateria(type) {
 Ice::Ice(const Ice &copy) : AMateria(copy) {
 }
 
-Ice&	Ice::operator=(const Ice &ice) {
+Ice&		Ice::operator=(const Ice &ice) {
 	if (this != &ice) {
 		type = ice.type;
 		xp = ice.xp;

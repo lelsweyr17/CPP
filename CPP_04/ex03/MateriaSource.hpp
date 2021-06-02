@@ -16,8 +16,8 @@ class MateriaSource : public IMateriaSource {
 		virtual AMateria*	createMateria(std::string const &type);
 
 	private:
-		AMateria	*source[4];
-		int			count;
+		AMateria			*source[4];
+		int					count;
 };
 
 #endif 

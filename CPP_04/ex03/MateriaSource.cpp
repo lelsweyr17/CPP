@@ -19,7 +19,7 @@ MateriaSource::MateriaSource(const MateriaSource &copy) {
 	operator=(copy);
 }
 
-MateriaSource& MateriaSource::operator=(const MateriaSource &ms) {
+MateriaSource&	MateriaSource::operator=(const MateriaSource &ms) {
 	if (this != &ms) {
 		for (int i = 0; i < 4; i++) {
 			source[i] = ms.source[i];
@@ -28,7 +28,7 @@ MateriaSource& MateriaSource::operator=(const MateriaSource &ms) {
 	return *this;
 }
 
-void		MateriaSource::learnMateria(AMateria *aMateria) {
+void			MateriaSource::learnMateria(AMateria *aMateria) {
 	if (count < 4) {
 		source[count] = aMateria;
 		std::cout << "* learning new Materia " << source[count]->getType() << " *" << std::endl;
@@ -40,7 +40,7 @@ void		MateriaSource::learnMateria(AMateria *aMateria) {
 	}
 }
 
-AMateria*	MateriaSource::createMateria(std::string const &type) {
+AMateria*		MateriaSource::createMateria(std::string const &type) {
 	for (int i = 0; i < 4; i++) {
 		if (source[i]->getType() == type) {
 			std::cout << "* create Materia " << source[i]->getType() << " *" << std::endl;

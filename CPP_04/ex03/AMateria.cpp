@@ -16,7 +16,7 @@ AMateria::AMateria(const AMateria &copy) {
 	operator=(copy);
 }
 
-AMateria& AMateria::operator=(const AMateria &aMateria) {
+AMateria&			AMateria::operator=(const AMateria &aMateria) {
 	if (this != &aMateria) {
 		xp = aMateria.xp;
 		type = aMateria.type;
