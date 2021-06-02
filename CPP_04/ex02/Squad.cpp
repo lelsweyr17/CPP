@@ -15,7 +15,7 @@ Squad::~Squad() {
 }
 
 Squad::Squad(const Squad &copy) {
-	(operator=(copy));
+	operator=(copy);
 }
 
 Squad &Squad::operator=(const Squad &sq) {

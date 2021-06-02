@@ -1,24 +1,19 @@
 #include "Enemy.hpp"
 
-Enemy::Enemy()
-{
+Enemy::Enemy() {
 }
 
-Enemy::~Enemy()
-{
+Enemy::~Enemy() {
 }
 
-Enemy::Enemy(int hp, std::string const & type) : hp(hp), type(type)
-{
+Enemy::Enemy(int hp, std::string const & type) : hp(hp), type(type) {
 }
 
-Enemy::Enemy(const Enemy& copy)
-{
+Enemy::Enemy(const Enemy& copy) {
 	operator=(copy);
 }
 
-Enemy&	Enemy::operator=(const Enemy& enemy)
-{
+Enemy&	Enemy::operator=(const Enemy& enemy) {
 	if (this != &enemy) {
 		hp = enemy.hp;
 		type = enemy.type;
@@ -26,19 +21,16 @@ Enemy&	Enemy::operator=(const Enemy& enemy)
 	return *this;
 }
 
-void	Enemy::takeDamage(int hpReduce)
-{
+void	Enemy::takeDamage(int hpReduce) {
 	if (hpReduce >= 0) {
 		hp -= hpReduce;
 	}
 }
 
-int		Enemy::getHP() const
-{
+int		Enemy::getHP() const {
 	return hp;
 }
 
-std::string const	Enemy::getType() const
-{
+std::string const	Enemy::getType() const {
 	return type;
 }

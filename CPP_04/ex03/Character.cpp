@@ -14,7 +14,7 @@ Character::Character(std::string const &name) : name(name), count(0) {
 }
 
 Character::Character(const Character &copy) {
-	(operator=(copy));
+	operator=(copy);
 }
 
 Character&			Character::operator=(const Character &character) {

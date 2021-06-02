@@ -1,33 +1,26 @@
 #include "Character.hpp"
 
-Character::Character()
-{
+Character::Character() {
 }
 
-Character::~Character()
-{
-	
+Character::~Character() {
 }
 
-Character::Character(std::string const &name) : name(name), ap(40), weapon(0)
-{
+Character::Character(std::string const &name) : name(name), ap(40), weapon(0) {
 }
 
-Character::Character(const Character& copy)
-{
+Character::Character(const Character& copy) {
 	operator=(copy);
 }
 
-Character& Character::operator=(const Character& character)
-{
+Character& Character::operator=(const Character& character) {
 	if (this != &character) {
 		name = character.name;
 	}
 	return *this;
 }
 
-std::ostream	&operator<<(std::ostream &out, const Character &character)
-{
+std::ostream	&operator<<(std::ostream &out, const Character &character) {
 	if (!character.getAWeapon()) {
 		out << character.getName() << " has " << character.getAP() << " AP and is unarmed" << std::endl;
 	}
@@ -37,33 +30,27 @@ std::ostream	&operator<<(std::ostream &out, const Character &character)
 	return out;
 }
 
-AWeapon				*Character::getAWeapon() const
-{
+AWeapon				*Character::getAWeapon() const {
 	return weapon;
 }
 
-std::string const	Character::getName() const
-{
+std::string const	Character::getName() const {
 	return name;
 }
 
-unsigned int		Character::getAP() const
-{
+unsigned int		Character::getAP() const {
 	return ap;
 }
 
-void				Character::equip(AWeapon *aWeapon)
-{
+void				Character::equip(AWeapon *aWeapon) {
 	weapon = aWeapon;
 }
 
-void				Character::recoverAP()
-{
+void				Character::recoverAP() {
 	ap = (ap + 10 >= 40) ? 40 : ap + 10;
 }
 
-void				Character::attack(Enemy *enemy)
-{
+void				Character::attack(Enemy *enemy) {
 	if (ap - weapon->getAPCost() >= 0) {
 		std::cout << name << " attacks " << enemy->getType() << " with " << weapon->getName() << std::endl;
 		weapon->attack();

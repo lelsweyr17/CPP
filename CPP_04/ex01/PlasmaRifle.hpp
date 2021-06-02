@@ -4,7 +4,7 @@
 # include <iostream>
 # include "AWeapon.hpp"
 
-class PlasmaRifle : public AWeapon{
+class PlasmaRifle : public AWeapon {
 	public:
 		PlasmaRifle();
 		~PlasmaRifle();

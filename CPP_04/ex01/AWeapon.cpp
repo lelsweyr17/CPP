@@ -1,24 +1,19 @@
-#include "AWeapon.hpp"
+ #include "AWeapon.hpp"
 
-AWeapon::AWeapon()
-{
+AWeapon::AWeapon() {
 }
 
-AWeapon::~AWeapon()
-{
+AWeapon::~AWeapon() {
 }
 
-AWeapon::AWeapon(std::string const &name, int apcost, int damage) : name(name), apCost(apcost), damage(damage)
-{
+AWeapon::AWeapon(std::string const &name, int apcost, int damage) : name(name), apCost(apcost), damage(damage) {
 }
 
-AWeapon::AWeapon(const AWeapon& copy)
-{
+AWeapon::AWeapon(const AWeapon& copy) {
 	operator=(copy);
 }
 
-AWeapon& AWeapon::operator=(const AWeapon& aWeapon)
-{
+AWeapon&			AWeapon::operator=(const AWeapon& aWeapon) {
 	if (&aWeapon != this) {
 		name = aWeapon.name;
 		damage = aWeapon.damage;
@@ -27,17 +22,14 @@ AWeapon& AWeapon::operator=(const AWeapon& aWeapon)
 	return *this;
 }
 
-int		        AWeapon::getAPCost() const
-{
+int		        	AWeapon::getAPCost() const {
 	return apCost;
 }
 
-int		        AWeapon::getDamage() const
-{
+int		        	AWeapon::getDamage() const {
 	return damage;
 }
 
-std::string const   AWeapon::getName() const
-{
+std::string const   AWeapon::getName() const {
 	return name;
 }

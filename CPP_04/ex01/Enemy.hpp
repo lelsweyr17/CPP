@@ -16,8 +16,8 @@ class Enemy {
 		std::string const	getType() const;
 		
 	protected:
-		unsigned int	hp;
-		std::string		type;
+		unsigned int		hp;
+		std::string			type;
 };
 
 #endif

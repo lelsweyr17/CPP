@@ -2,8 +2,7 @@
 #include "Victim.hpp"
 #include "Peon.hpp"
 
-int main()
-{
+int main() {
 	Sorcerer robert("Robert", "the Magnificent");
 
 	Victim jim("Jimmy");

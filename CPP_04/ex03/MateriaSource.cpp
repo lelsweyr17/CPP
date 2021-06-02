@@ -8,8 +8,7 @@ MateriaSource::MateriaSource() : count(0) {
 }
 
 MateriaSource::~MateriaSource() {
-	for (int i = 0; i < 4; i++)
-	{
+	for (int i = 0; i < 4; i++) {
 		if (source[i]) {
 			delete source[i];
 		}
@@ -17,7 +16,7 @@ MateriaSource::~MateriaSource() {
 }
 
 MateriaSource::MateriaSource(const MateriaSource &copy) {
-	(operator=(copy));
+	operator=(copy);
 }
 
 MateriaSource& MateriaSource::operator=(const MateriaSource &ms) {

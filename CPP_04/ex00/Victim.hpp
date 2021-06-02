@@ -15,7 +15,7 @@ class Victim {
 
 	protected:
 		Victim();
-		std::string name;
+		std::string	name;
 };
 
 std::ostream	&operator<<(std::ostream &out, const Victim &victim);

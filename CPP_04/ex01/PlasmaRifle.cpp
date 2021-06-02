@@ -1,23 +1,18 @@
 #include "PlasmaRifle.hpp"
 
-PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21)
-{
+PlasmaRifle::PlasmaRifle() : AWeapon("Plasma Rifle", 5, 21) {
 }
 
-PlasmaRifle::~PlasmaRifle()
-{
+PlasmaRifle::~PlasmaRifle() {
 }
 
-PlasmaRifle::PlasmaRifle(std::string const &name, int apcost, int damage) : AWeapon(name, apcost, damage)
-{
+PlasmaRifle::PlasmaRifle(std::string const &name, int apcost, int damage) : AWeapon(name, apcost, damage) {
 }
 
-PlasmaRifle::PlasmaRifle(const PlasmaRifle& copy) : AWeapon(copy)
-{
+PlasmaRifle::PlasmaRifle(const PlasmaRifle& copy) : AWeapon(copy) {
 }
 
-PlasmaRifle&    PlasmaRifle::operator=(const PlasmaRifle& plasmaRifle)
-{
+PlasmaRifle&    PlasmaRifle::operator=(const PlasmaRifle& plasmaRifle) {
     if (&plasmaRifle != this) {
         name = plasmaRifle.name;
         damage = plasmaRifle.damage;
@@ -26,7 +21,6 @@ PlasmaRifle&    PlasmaRifle::operator=(const PlasmaRifle& plasmaRifle)
     return *this;
 }
 
-void            PlasmaRifle::attack() const
-{
+void            PlasmaRifle::attack() const {
     std::cout << "* piouuu piouuu piouuu *" << std::endl;
 }

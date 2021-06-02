@@ -6,8 +6,7 @@
 #include "RadScorpion.hpp"
 #include "SuperMutant.hpp"
 
-int main()
-{
+int main() {
 	Character *me = new Character("Titan");
 	std::cout << *me;
 

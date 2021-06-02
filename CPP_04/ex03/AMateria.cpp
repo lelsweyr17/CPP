@@ -13,7 +13,7 @@ AMateria::AMateria(std::string const &type) : xp(0), type(type) {
 }
 
 AMateria::AMateria(const AMateria &copy) {
-	(operator=(copy));
+	operator=(copy);
 }
 
 AMateria& AMateria::operator=(const AMateria &aMateria) {
