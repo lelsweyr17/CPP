@@ -1,4 +1,4 @@
-NAME = ex00
+NAME = ex01
 CC = clang++
 CPP_FLAGS = -Wall -Wextra -Werror
 CPP_FILES = main.cpp Bureaucrat.cpp Form.cpp

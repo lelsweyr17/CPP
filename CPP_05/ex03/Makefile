@@ -1,7 +1,7 @@
-NAME = ex02
+NAME = ex03
 CC = clang++
 CPP_FLAGS = -Wall -Wextra -Werror
-CPP_FILES = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+CPP_FILES = main.cpp Bureaucrat.cpp Form.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 OBJFILES = $(CPP_FILES:.cpp=.o)
 
 .PHONY: all clean fclean re

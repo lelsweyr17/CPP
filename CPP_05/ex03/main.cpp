@@ -3,30 +3,21 @@
 #include "PresidentialPardonForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "ShrubberyCreationForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
 	srand(time(NULL));
-	Bureaucrat  armen("Armen", 152);
-	Bureaucrat  koko("Koko", 75);
+	Bureaucrat  koko("Koko", 99);
 	Bureaucrat  loli("Loli", 1);
-	Bureaucrat  kiki("Kiki", 0);
+	Intern	intern;
+	Form *one;
+	Form *two;
+	Form *three;
 
-	Form *one = new PresidentialPardonForm("PPF");
-	Form *two = new RobotomyRequestForm("RRF");
-	Form *three = new ShrubberyCreationForm("SCF");
-
-	std::cout << koko << std::endl << std::endl;
-	std::cout << loli << std::endl << std::endl;
-
-	loli.incrementingAGrade();
-	std::cout << loli << std::endl << std::endl;
-	koko.incrementingAGrade();
-	std::cout << koko << std::endl << std::endl;
-	loli.decrementingAGrade();
-	std::cout << loli << std::endl << std::endl;
-	koko.decrementingAGrade();
-	std::cout << koko << std::endl << std::endl;
+	one = intern.makeForm("ShrubberyCreationForm", "SCF");
+	two = intern.makeForm("RobotomyRequestForm", "test");
+	three = intern.makeForm("PresidentialPardonForm", "test");
 
 	std::cout << std::endl;
 	loli.signForm (*one);
