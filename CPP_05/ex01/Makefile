@@ -19,5 +19,10 @@ clean:
 
 fclean: clean
 	rm -rf $(NAME)
+	rm -rf SCF
+	rm -rf *.dSYM
+
+leak: all
+	valgrind ./$(NAME)
 
 re: fclean all
