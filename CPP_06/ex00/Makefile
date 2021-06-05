@@ -1,4 +1,3 @@
-
 NAME = convert
 CC = clang++
 CPP_FLAGS = -Wall -Wextra -Werror

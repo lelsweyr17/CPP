@@ -13,7 +13,7 @@ void	toInt(double d) {
 	}
 }
 
-int		checkNum(long long int d) {
+int	checkNum(long long int d) {
 	int count;
 
 	count = 0;
@@ -83,7 +83,7 @@ int	checkArg(std::string arg) {
 	return 0;
 }
 
-int main(int argc, char **argv) {
+int	main(int argc, char **argv) {
 	if (argc != 2) {
 		std::cout << "Invalid nbr of arguments" << std::endl;
 		return 1;
