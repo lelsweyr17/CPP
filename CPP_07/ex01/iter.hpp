@@ -13,7 +13,6 @@ void	iter(T *a, unsigned int b, void (*f)(T&)) {
 	for (int i = 0; i < b; i++) {
 		(*f)(a[i]);
 	}
-	std::cout << std::endl;
 }
 
 #endif 

@@ -7,9 +7,9 @@ int main() {
 	Array <char> ch(10);
 	Array <float> f(b);
 
-std::cout << std::endl;
+	std::cout << std::endl;
 	try {
-		std::cout << "ch[0] = " << ch[0] << std::endl << std::endl;
+		std::cout << "ch[0] = '" << ch[0] << "'" << std::endl << std::endl;
 	}
 	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
@@ -41,7 +41,6 @@ std::cout << std::endl;
 	catch(const std::exception& e) {
 		std::cerr << e.what() << '\n';
 	}
-
 	try {
 		std::cout << "c[-1] = " << c[-1] << std::endl << std::endl;
 	}
