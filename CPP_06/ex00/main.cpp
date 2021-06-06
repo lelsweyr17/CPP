@@ -54,14 +54,14 @@ void	toDouble(double d) {
 
 void	toChar(double d) {
 	std::cout << "char:\t";
-	long long c = static_cast<long long> (d);
+	long long int c = static_cast<long long int> (d);
 	if (c == LONG_LONG_MIN) {
 		std::cout << "impossible" << std::endl;
 	}
-	else if (c % 128 < 33) {
+	else if (c % 128 == 127 || c % 128 < 33) {
 		std::cout << "not displayable" << std::endl;
 	}
-	else{
+	else {
 		std::cout << static_cast<char> (c % 128) << std::endl;
 	}
 }
