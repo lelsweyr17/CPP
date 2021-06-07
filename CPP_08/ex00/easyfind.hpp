@@ -1,8 +1,11 @@
 #ifndef EASYFIND_HPP
 # define EASYFIND_HPP
 
-#include <iostream>
-#include <vector>
+# include <iostream>
+# include <vector>
+# include <list>
+# include <deque>
+# include <set>
 
 class OccurenceIsNotFound : public std::exception {
 	public:
@@ -15,8 +18,7 @@ const char *OccurenceIsNotFound::what() const throw() {
 
 template<typename T>
 typename T::const_iterator    easyfind(T a, int b) {
-	std::vector<int>::const_iterator it = a.begin();
-	it = find(a.begin(), a.end(), b);
+	typename T::const_iterator it = find(a.begin(), a.end(), b);
 	if (it == a.end())
 		throw OccurenceIsNotFound();
 	return it;
