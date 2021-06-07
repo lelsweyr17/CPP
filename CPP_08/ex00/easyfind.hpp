@@ -5,7 +5,6 @@
 # include <vector>
 # include <list>
 # include <deque>
-# include <set>
 
 class OccurenceIsNotFound : public std::exception {
 	public:
