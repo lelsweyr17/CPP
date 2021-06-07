@@ -12,9 +12,10 @@ class Span {
 		Span(const Span&);
 		Span &operator=(const Span&);
 
-		void addNumber(int nbr);
-		void    addNumber(std::vector<int>::iterator t1, \
-		std::vector<int>::iterator t2);
+		void	addNumber(int nbr);
+		void    addNumber(std::vector<int>::iterator t1, std::vector<int>::iterator t2);
+		int		shortestSpan();
+		int		longestSpan();
 
 		class StorageIsFull : public std::exception {
 			public:
@@ -26,8 +27,6 @@ class Span {
 				virtual const char *what() const throw();
 		};
 
-		int					shortestSpan();
-		int					longestSpan();
 
 	private:
 		std::vector<int>	_store;
