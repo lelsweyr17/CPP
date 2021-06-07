@@ -9,8 +9,8 @@ class Span {
 		Span();
 		~Span();
 		Span(unsigned int);
-		Span(const Span &copy);
-		Span &operator=(const Span &span);
+		Span(const Span&);
+		Span &operator=(const Span&);
 
 		void addNumber(int nbr);
 		void    addNumber(std::vector<int>::iterator t1, \
